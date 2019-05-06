@@ -1,18 +1,19 @@
 import React from 'react'
 
 function Joke(props){
-	/*const wholeJoke = {
-		punchline: i.joke.punchline
+	const wholeJoke = {
+		punchline: props.joke.punchline
 	};
 
-	if(typeof(i.joke.question) !== 'undefined'){
-		wholeJoke.question = i.joke.question;
+	if(typeof(props.joke.question) !== 'undefined'){
+		wholeJoke.question = props.joke.question;
 	}else{
 		wholeJoke.question = '';
-	}*/
+	}
 	return(
 		<div>
-			<p>{props.joke.punchline}</p>
+			<p>{wholeJoke.question}</p>
+			<p>{wholeJoke.punchline}</p>
 		</div>
 	);
 }
