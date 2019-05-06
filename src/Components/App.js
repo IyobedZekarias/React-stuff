@@ -1,21 +1,17 @@
 import React from 'react'
+import Joke from './Joke.js'
+import './style.css'
 
-function Joke(props){
-	const wholeJoke = {
-		punchline: props.joke.punchline
-	};
+function App(){
 
-	if(typeof(props.joke.question) !== 'undefined'){
-		wholeJoke.question = props.joke.question;
-	}else{
-		wholeJoke.question = '';
-	}
 	return(
-		<div>
-			<p>{wholeJoke.question}</p>
-			<p>{wholeJoke.punchline}</p>
+		<div id="wrapper">
+			<Joke 
+				joke={{
+					question: 'kleptomaniacs are weird',
+					punchline: 'It’s hard to explain puns to kleptomaniacs because they always take things literally.'}}/>
 		</div>
 	);
 }
 
-export default Joke
+export default App
